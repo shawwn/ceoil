@@ -180,7 +180,9 @@
 					instsize = control.drumkit[control.instrument[control.musicbox[control.currentbox].instr].type - 1].size;
 				}
 				if (control.musicbox[control.currentbox].start + i - 1 < instsize) {
-					if (i % 2 == 0) {
+					var n:int = control.musicbox[control.currentbox].start + i - 1;
+					var name:String = control.notename[n];
+					if (name.charAt(name.length-1) != "#") {
 						fillrect(0, screenheight - linesize - (i * linesize), screenwidth, linesize, 100 + (control.musicbox[control.currentbox].palette * 10));
 						fillrect(0, screenheight - linesize - (i * linesize), screenwidth, 2, 103+(control.musicbox[control.currentbox].palette*10));
 					}else{
