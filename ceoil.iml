@@ -4,6 +4,11 @@
     <configurations>
       <configuration name="ceoil" target-platform="Desktop" pure-as="true" main-class="Main" output-file="Main.swf" output-folder="$MODULE_DIR$/out/production/ceoil">
         <dependencies target-player="11.1">
+          <entries>
+            <entry library-id="0aa766b9-29d2-407d-afb6-fb2fbf7dfbb2">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
           <sdk name="flex46" />
         </dependencies>
         <compiler-options />
@@ -12,7 +17,9 @@
         <packaging-ios />
       </configuration>
     </configurations>
-    <compiler-options />
+    <compiler-options>
+      <option name="additionalOptions" value="-define+=CONFIG::desktop,true -define+=CONFIG::web,false" />
+    </compiler-options>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -21,5 +28,15 @@
     </content>
     <orderEntry type="jdk" jdkName="flex46" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="0aa766b9-29d2-407d-afb6-fb2fbf7dfbb2" />
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/sion065.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
